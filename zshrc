@@ -33,4 +33,10 @@ source <(kubectl completion zsh)
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 alias k="kubectl"
+alias kns="kubens"
+alias kcx="kubectx"
 alias vi="vim"
+source <(kubectl completion zsh)
+complete -F __start_kubectl k
+complete -F __start_kubens kns
+complete -F __start_kubectx kcx
